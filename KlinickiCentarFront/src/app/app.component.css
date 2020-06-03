@@ -1,0 +1,60 @@
+.header {
+    padding: 44px;
+    font-size: 44px;
+    text-align: center;
+    font-family:Impact, Charcoal, sans-serif;
+    background-color: rgb(158, 19, 100);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0.6%;
+    color: white;
+    
+  }
+  .headerText {
+    font-size: 44px;
+    text-align: center;
+    font-family:Impact, Charcoal, sans-serif;
+    background-color: rgb(158, 19, 100);
+    color: white;
+    
+  }
+
+  .imageLogo {
+    
+    object-fit: fill;
+    background-repeat: no-repeat;
+    width: 27%;
+    margin-left: 566px;
+    margin-right: 400px;
+    margin-top: 14px;
+    height: 14%;
+    color: rgb(80, 16, 61);
+    font-size: 44px;
+    text-align: center;
+    
+  }
+
+  .div {
+    background-color: rgba(158, 19, 100, 0.212);
+    color: white;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 11px;
+    padding: 26px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .button1 {
+    border:solid;
+    background-color: rgb(245, 209, 230);
+    border-color: rgb(255, 255, 255);
+    padding: 1px 41px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
