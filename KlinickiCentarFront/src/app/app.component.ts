@@ -3,7 +3,7 @@ import {USER_ID_KEY,USER_ROLE_KEY,USERNAME_KEY,USER_TOKEN_KEY} from './Keys'
 import {UserService} from './Services/UserService'
 
 @Component({
-  selector: 'app-root',
+  selector: 'KlinickiCentarFront-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

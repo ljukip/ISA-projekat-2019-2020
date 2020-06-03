@@ -15,18 +15,28 @@ export class UserService{
 
     private user:User;
     currentUser;
+    private usersUrl: string;
 
     role:String= localStorage.getItem(USER_ROLE_KEY);
  
     
-    _url = 'http://localhost:8081/users/public/add-user';
+    _url = 'http://localhost:8081/registration';
     _url1 = 'http://localhost:8081/users/public';
 
-    constructor(private _http: HttpClient, private apiService: ApiService, private config: ConfigService) { }
+    constructor(private _http: HttpClient, private apiService: ApiService, private config: ConfigService) {
+        this.usersUrl = 'http://localhost:8081/registration';
+     }
 
     getUser(userId: number): Observable<any> {
         return this._http.get(`${this._url1}/${userId}`);
     }
+    
+    isRegistered (): Observable<any> {
+        if (localStorage.getItem(USER_ID_KEY) == null) {
+           return this._http.get(`http://localhost:8081/registration`);
+        }
+    }
+
     isUserLoggedIn(): boolean {
         return (localStorage.getItem(USER_ID_KEY) != null);
     }

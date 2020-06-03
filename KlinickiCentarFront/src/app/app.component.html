@@ -7,14 +7,14 @@
   <p>Please register or login on the buttons below: </p>
 
   <ng-template [ngIf]= "!isUserLoggedIn()">
-    <button  class="button1"><a [routerLink]="['/RegistationPage']">Registation</a></button>
+    <button  class="button1"><a routerLink="/registation">Registation</a></button>
   </ng-template>
 
   <br>
   <br>
 
   <ng-template [ngIf]= "!isUserLoggedIn()">
-    <button class="button1"><a [routerLink]="['/LoginPage']">Login</a></button>
+    <button class="button1"><a routerLink="/login">Login</a></button>
   </ng-template>
 
   <ng-template [ngIf]=" isUserPhysician()">
