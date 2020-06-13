@@ -1,4 +1,4 @@
-package model.users;
+package com.klinickicentar.KlinickiCentarREST.model.users;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,14 +10,19 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Pattern;
 
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import javax.persistence.*;
+
 @Entity // This tells Hibernate to make a table out of this class
-@Table
-public class User {
+@Table(name = "users")
+@EntityListeners(AuditingEntityListener.class)
+public class User{
   @Id
   @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 32, nullable = false)
+    @Column(name="name", length = 32, nullable = false)
     @Pattern(regexp = "^[A-Za-z]*$")
 	private String name;
 

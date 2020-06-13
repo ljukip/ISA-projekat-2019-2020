@@ -1,4 +1,4 @@
-package controller.users;
+package com.klinickicentar.KlinickiCentarREST.controller.users;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import model.users.User;
-import repository.Users.UserR;
+import com.klinickicentar.KlinickiCentarREST.model.users.User;
+import com.klinickicentar.KlinickiCentarREST.repository.Users.UserR;
+
 
 @Controller // This means that this class is a Controller
 @CrossOrigin(origins = "http://localhost:4200")

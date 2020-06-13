@@ -1,10 +1,11 @@
-package model.general;
+package com.klinickicentar.KlinickiCentarREST.model.general;
 
 import java.util.Date;
 import java.util.List;
 
-import model.users.Physician;
-import model.users.User;
+import com.klinickicentar.KlinickiCentarREST.model.users.Physician;
+import com.klinickicentar.KlinickiCentarREST.model.users.User;
+
 
 public class Reservation {
 

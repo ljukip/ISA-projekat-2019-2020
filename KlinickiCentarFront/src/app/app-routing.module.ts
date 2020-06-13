@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import{LOGIN_PATH,REGISTRATION_PATH} from './paths_router';
-import {RegistrationComponent} from './components/registration/registration'
+// import{LOGIN_PATH,REGISTRATION_PATH} from './paths_router';
+import {RegistrationComponent} from './components/registration/registration.component'
+
 
 
 const routes: Routes = [
-  { path: REGISTRATION_PATH, component: RegistrationComponent },
-  {
-    path: '**',
-    redirectTo: '/404'
-  }
+  // { path: '**', component: DefaultLayoutComponent },
+  { path: 'registration', component: RegistrationComponent },
+  
 ];
 
 @NgModule({

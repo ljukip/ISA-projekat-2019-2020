@@ -1,9 +1,10 @@
-package model.general;
+package com.klinickicentar.KlinickiCentarREST.model.general;
 
 import javax.validation.constraints.Min;
 
-import model.clinic.Clinic;
-import model.clinicalcenter.ClinicalCenter;
+import com.klinickicentar.KlinickiCentarREST.model.clinic.Clinic;
+import com.klinickicentar.KlinickiCentarREST.model.clinicalcenter.ClinicalCenter;
+
 
 
 public class Address {

@@ -1,4 +1,4 @@
-package Web.config;
+package com.klinickicentar.KlinickiCentarREST.Web.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

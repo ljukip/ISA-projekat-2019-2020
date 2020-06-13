@@ -1,8 +1,10 @@
-package model.clinic;
+package com.klinickicentar.KlinickiCentarREST.model.clinic;
 
 import java.util.List;
-import model.general.Address;
-import model.users.Physician;
+
+import com.klinickicentar.KlinickiCentarREST.model.general.Address;
+import com.klinickicentar.KlinickiCentarREST.model.users.Physician;
+;
 
 public class Clinic {
 	

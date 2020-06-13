@@ -4,7 +4,7 @@ import { UserService } from 'src/app/Services/UserService';
 import { User } from 'src/app/model/users/user';
 
 @Component({
-    selector: 'app-registration',
+    // selector: 'registration',
     templateUrl: './registration.html',
     styleUrls: ['./registration.css']
   })

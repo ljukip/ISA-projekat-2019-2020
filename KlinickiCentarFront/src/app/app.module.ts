@@ -8,7 +8,7 @@ import { CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import {UserService} from './Services/UserService';
-import {RegistrationComponent} from './components/registration/registration'
+import {RegistrationComponent} from './components/registration/registration.component'
 
 
 @NgModule({
