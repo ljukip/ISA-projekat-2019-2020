@@ -16,10 +16,11 @@ import javax.persistence.*;
 
 @Entity // This tells Hibernate to make a table out of this class
 @Table(name = "users")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @EntityListeners(AuditingEntityListener.class)
 public class User{
   @Id
-  @GeneratedValue(strategy=GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
 
     @Column(name="name", length = 32, nullable = false)
@@ -53,6 +54,13 @@ public class User{
 	@Column(length = 45, nullable = false, unique = true, updatable = false)
 	@Pattern(regexp = "^[A-Za-z0-9+_.-]+@(.+)$")
 	private String email;
+	
+	@Column(nullable = false)
+	private boolean emailComfirmation;
+	
+	@Column(length = 45, nullable = false, unique = true, updatable = false)
+	@Pattern(regexp = "^[A-Za-z0-9+_.-]+@(.+)$")
+	private String emailToken;
 
 	@Column(length = 45, nullable = false, unique = true)
 	@Pattern(regexp = "^[0-9]{9,10}$")
@@ -61,10 +69,18 @@ public class User{
 	@Column(length = 45, nullable = false)
 	@Pattern(regexp = "^[A-Za-z]*$")
 	private String userName;
-
+	
 	@Column(length = 45, nullable = false)
 	@Pattern(regexp = "^[A-Za-z]*$")
 	private String password;
+
+	@Column(length = 305, nullable = false)
+	@Pattern(regexp = "^[A-Za-z]*$")
+	private String notes;
+	
+	@Column(length = 45, nullable = false)
+	@Pattern(regexp = "^[A-Za-z]*$")
+	private String status;
 
 	@Column(nullable = false)
 	private boolean activated;
