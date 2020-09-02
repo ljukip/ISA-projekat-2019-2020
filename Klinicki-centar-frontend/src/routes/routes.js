@@ -43,7 +43,7 @@ export default function Routes() {
       <Route exact path="/confirmation" component={Confirmation} />
       <Route exact path="/chart" component={Chart} />
       <Route exact path="/types" component={Types} />
-      <Route exact path="/denied" component={Denied} />
+      <Route exact path="/registration_denied" component={Denied} />
       <Route exact path="/requests" component={Requests} />
       <Route exact path="/exam_in_progress" component={ExamInProgress} />
       <Route exact path="/profile_clinic_admin" component={ProfileAK} />

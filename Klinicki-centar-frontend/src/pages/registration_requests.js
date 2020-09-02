@@ -38,6 +38,10 @@ const columns = [
     formatter: function (cell, formatterParams, onRendered) {
       return "<button onClick={handleClick}>Prihvati</button>";
     },
+    cellClick: function (e, cell) {
+      alert("Zahtev prihvacen");
+      cell.getRow().delete();
+    },
   },
 
   {
@@ -50,6 +54,10 @@ const columns = [
     },
     formatter: function (cell, formatterParams, onRendered) {
       return "<button onClick={handleClick}>Otkazi</button>";
+    },
+    cellClick: function (e, cell) {
+      window.location.href = "/registration_denied";
+      cell.getRow().delete();
     },
   },
 ];

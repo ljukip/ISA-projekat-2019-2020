@@ -26,7 +26,12 @@ export default function Denied() {
         <p className="App-p">Zasto ste odbili zahtev?</p>
         <div bgColor="transparent" className="Div-vertical">
           <textarea id="reason" name="reason" rows="4" cols="50"></textarea>
-          <Button className="App-button">Posalji</Button>
+          <Button
+            className="App-button "
+            onClick={(event) => (window.location.href = "/requests")}
+          >
+            Posalji
+          </Button>
         </div>
       </div>
     </div>

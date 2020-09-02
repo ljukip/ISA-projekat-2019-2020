@@ -50,7 +50,12 @@ function ProfileClinic() {
           <div className="Div-horizontal-transparent">
             <MDBBox className="box1">
               Lekari
-              <button className="App-button1"> </button>
+              <button
+                className="App-button1"
+                onClick={(event) => (window.location.href = "/list_physicians")}
+              >
+                {" "}
+              </button>
             </MDBBox>
             <MDBBox className="box2">
               Sale
