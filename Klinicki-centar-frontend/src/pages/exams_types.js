@@ -17,15 +17,22 @@ import {} from "moment";
 
 const columns = [
   {
-    title: "",
     field: "id",
     align: "left",
     formatter: "rownum",
   },
   {
-    title: "",
     field: "type",
     align: "left",
+  },
+  {
+    field: "delete",
+    formatter: "buttonCross",
+    width: 40,
+    align: "center",
+    cellClick: function (e, cell) {
+      cell.getRow().delete();
+    },
   },
 ];
 const data = [
@@ -50,15 +57,8 @@ class types extends React.Component {
     history.push("/home_patient");
   }
 
-  cellClick = (e, cell) => {
-    console.log("ref table: ", this.ref.table);
-    console.log("cellClick id: ${row.getData().id}", cell, e);
-    //const history = useHistory();
-    alert("stisnuto");
-    //history.push("/home_patient");
-  };
   onAddRow() {
-    this.tableRef.current.table.addRow({}, true);
+    this.tableRef.current.table.addRow({}, false);
   }
   setData = () => {
     this.setState({ data });
@@ -103,13 +103,6 @@ class types extends React.Component {
                 onClick={this.onAddRow}
               >
                 novi tip
-              </button>
-              <button
-                className="App-button"
-                id="add-row"
-                onClick={this.onAddRow}
-              >
-                obrisi tip
               </button>
             </div>
           </div>

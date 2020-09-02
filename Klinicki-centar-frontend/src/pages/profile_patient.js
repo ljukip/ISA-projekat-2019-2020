@@ -33,11 +33,14 @@ export default function Patient() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    window.location.href = "/home_patient";
+    alert("uspesno promenjeni podaci");
   }
 
   async function handleConfirmationSubmit(event) {
     event.preventDefault();
-
+    window.location.href = "/home_patient";
+    alert("uspesno promenjeni podaci");
     setIsLoading(true);
   }
 
@@ -79,6 +82,7 @@ export default function Patient() {
               <FormControl
                 autoFocus
                 type="email"
+                disabled={true}
                 value={fields.email}
                 onChange={handleFieldChange}
               />
@@ -88,6 +92,7 @@ export default function Patient() {
               <FormControl
                 autoFocus
                 type="num"
+                disabled={true}
                 value={fields.num}
                 onChange={handleFieldChange}
               />
@@ -155,7 +160,7 @@ export default function Patient() {
               type="submit"
               bsSize="primary"
               isLoading={isLoading}
-              disabled={!validateForm()}
+              //disabled={!validateForm()}
             >
               Potvrdi
             </Button>

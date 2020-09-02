@@ -47,11 +47,21 @@ function ProfileAdminK() {
             </MDBBox>
             <MDBBox className="box2">
               Tipovi pregleda
-              <button className="App-button1"> </button>
+              <button
+                className="App-button1"
+                onClick={(event) => (window.location.href = "/types")}
+              >
+                {" "}
+              </button>
             </MDBBox>
             <MDBBox className="box3">
               Lista svih lekara
-              <button className="App-button1"> </button>
+              <button
+                className="App-button1"
+                onClick={(event) => (window.location.href = "/list_physicians")}
+              >
+                {" "}
+              </button>
             </MDBBox>
             <MDBBox className="box4">
               Izvestaj poslovanja
@@ -61,11 +71,21 @@ function ProfileAdminK() {
           <div className="Div-horizontal-transparent">
             <MDBBox className="box4">
               Profil klinike
-              <button className="App-button1"> </button>
+              <button
+                className="App-button1"
+                onClick={(event) => (window.location.href = "/profile_clinic")}
+              >
+                {" "}
+              </button>
             </MDBBox>
             <MDBBox className="box3">
               Slobodni termini za preglede
-              <button className="App-button1"> </button>
+              <button
+                className="App-button1"
+                onClick={(event) => (window.location.href = "/exams")}
+              >
+                {" "}
+              </button>
             </MDBBox>
             <MDBBox className="box2">
               Promeni lozinku

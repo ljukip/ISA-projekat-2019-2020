@@ -34,27 +34,42 @@ export default function Homepatient() {
   return (
     <div className="App">
       <div className="App-home">
-        <Toolbar
-          logo={logo}
-          brand="InfoKC"
-          menu={menu}
-          className="toolbar"
-        ></Toolbar>
+        <Toolbar logo={logo} brand="InfoKC" className="toolbar"></Toolbar>
+        <button
+          className="App-button"
+          block
+          onClick={(event) => (window.location.href = "/profile_patient")}
+        >
+          profil pacijenta
+        </button>
         <p></p>
         <p></p>
         <p className="App-p">Pocetna stranica korisnika</p>
         <div bgColor="transparent" className="Div-horizontal">
           <MDBBox className="box1">
             Lista klinika
-            <button className="App-button1"></button>
+            <button
+              className="App-button1"
+              onClick={(event) => (window.location.href = "/list_clinics")}
+            ></button>
           </MDBBox>
           <MDBBox className="box2">
             Zdravstveni karton
-            <button className="App-button2"> </button>
+            <button
+              className="App-button2"
+              onClick={(event) => (window.location.href = "/chart")}
+            >
+              {" "}
+            </button>
           </MDBBox>
           <MDBBox className="box3">
             Istorija pregleda
-            <button className="App-button3"> </button>
+            <button
+              className="App-button3"
+              onClick={(event) => (window.location.href = "/history")}
+            >
+              {" "}
+            </button>
           </MDBBox>
         </div>
       </div>

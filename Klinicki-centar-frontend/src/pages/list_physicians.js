@@ -48,6 +48,9 @@ const columns = [
     formatter: function (cell, formatterParams, onRendered) {
       return "<button onClick={handleClick}>izaberi</button>";
     },
+    cellClick: function (e, cell) {
+      window.location.href = "/confirmation";
+    },
   },
 ];
 const data = [
@@ -109,7 +112,6 @@ class physicianList extends React.Component {
             <React15Tabulator
               columns={columns}
               data={data}
-              cellClick={this.cellClick}
               data-custom-attr="test-custom-attribute"
               className="custom-css-class"
             />

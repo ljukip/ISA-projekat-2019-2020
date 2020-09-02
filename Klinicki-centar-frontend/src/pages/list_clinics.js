@@ -14,6 +14,7 @@ import { React15Tabulator } from "react-tabulator";
 import "react-tabulator/lib/css/bootstrap/tabulator_bootstrap.min.css";
 import { FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import { useState } from "react";
+import { history } from "../helpers/browser_history.js";
 
 const columns = [
   { title: "Naziv", field: "name", width: 150, align: "left" },
@@ -30,7 +31,10 @@ const columns = [
     width: 114,
     align: "center",
     formatter: function (cell, formatterParams, onRendered) {
-      return "<button onClick={handleClick}>izaberi</button>";
+      return "<button>izaberi</button>";
+    },
+    cellClick: function (e, cell) {
+      window.location.href = "/list_physicians";
     },
   },
 ];
@@ -60,11 +64,6 @@ class clinicList extends React.Component {
     data: [],
   };
   ref = true;
-  handleClick() {
-    const history = useHistory();
-    alert("stisnuto");
-    history.push("/home_patient");
-  }
   rowClick = (e, row) => {
     console.log("ref table: ", this.ref.table); // this is the Tabulator table instance
     console.log("rowClick id: ${row.getData().id}", row, e);
@@ -80,13 +79,13 @@ class clinicList extends React.Component {
   clearData = () => {
     this.setState({ data: [] });
   };
-  handleClick() {
+  handleClick = () => {
     try {
       alert("stisnuto");
     } catch (e) {
       alert(e.message);
     }
-  }
+  };
 
   render() {
     const [datum, setDatum] = []; //this.useState(0);
@@ -141,7 +140,6 @@ class clinicList extends React.Component {
             <React15Tabulator
               columns={columns}
               data={data}
-              rowClick={this.rowClick}
               data-custom-attr="test-custom-attribute"
               className="custom-css-class"
             />

@@ -57,6 +57,10 @@ const columns = [
     formatter: function (cell, formatterParams, onRendered) {
       return "<button onClick={handleClick}>Zakazivanje</button>";
     },
+    cellClick: function (e, cell) {
+      window.location.href = "/home_patient";
+      alert("uspesno zakazan pregled");
+    },
   },
 ];
 const data = [

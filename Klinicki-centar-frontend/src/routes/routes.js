@@ -21,6 +21,8 @@ import ExamInProgress from "../pages/exam_in_progress.js";
 import Requests from "../pages/registration_requests";
 import Denied from "../pages/registration_denied.js";
 import Types from "../pages/exams_types.js";
+import ProfileAKC from "../pages/profile_kc_admin.js";
+import HomePhy from "../pages/home_physician.js";
 import { BrowserRouter as Router } from "react-router-dom";
 
 export default function Routes() {
@@ -45,6 +47,8 @@ export default function Routes() {
       <Route exact path="/requests" component={Requests} />
       <Route exact path="/exam_in_progress" component={ExamInProgress} />
       <Route exact path="/profile_clinic_admin" component={ProfileAK} />
+      <Route exact path="/profile_kc_admin" component={ProfileAKC} />
+      <Route exact path="/home_physician" component={HomePhy} />
     </Router>
   );
 }
