@@ -17,7 +17,18 @@ import { useState } from "react";
 import { history } from "../helpers/browser_history.js";
 
 const columns = [
-  { title: "Naziv", field: "name", width: 150, align: "left" },
+  {
+    title: "Naziv",
+    field: "name",
+    width: 150,
+    align: "left",
+    formatter: function (cell, formatterParams, onRendered) {
+      return "<button>Ime klinike</button>";
+    },
+    cellClick: function (e, cell) {
+      window.location.href = "/profile_clinic";
+    },
+  },
   {
     title: "avgOcena",
     field: "avgRate",
@@ -112,7 +123,7 @@ class clinicList extends React.Component {
                   autoFocus
                   type="date"
                   value={datum}
-                  onChange={(e) => this.setDatum(e.target.value)}
+                  // onChange={(e) => this.setDatum(e.target.value)}
                 />
                 <p></p>
                 <p></p>
@@ -121,7 +132,7 @@ class clinicList extends React.Component {
                 <FormLabel className="App-label">Tip</FormLabel>
                 <FormControl
                   value={tip}
-                  onChange={(e) => setTip(e.target.value)}
+                  //onChange={(e) => setTip(e.target.value)}
                   type="tip"
                 />
                 <p></p>

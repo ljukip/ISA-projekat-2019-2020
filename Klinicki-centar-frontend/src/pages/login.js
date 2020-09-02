@@ -22,7 +22,6 @@ export default function Login() {
   function validateForm() {
     return email.length > 0 && password.length > 0;
   }
-  
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -63,6 +62,7 @@ export default function Login() {
           <FormControl
             autoFocus
             type="email"
+            required={true}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />

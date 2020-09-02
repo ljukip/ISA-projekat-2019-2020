@@ -63,7 +63,12 @@ function ProfileClinic() {
             </MDBBox>
             <MDBBox className="box3">
               Termini
-              <button className="App-button1"> </button>
+              <button
+                className="App-button1"
+                onClick={(event) => (window.location.href = "/exams")}
+              >
+                {" "}
+              </button>
             </MDBBox>
             <MDBBox className="box4">
               Cenovnik
