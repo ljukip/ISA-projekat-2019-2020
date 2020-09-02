@@ -44,6 +44,10 @@ export default function Registration() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    window.location.href = "/";
+    alert(
+      "Zahtev za registraciju je poslat. Proverite Vasu email adresu za potvrdu."
+    );
 
     setIsLoading(true);
 
@@ -54,6 +58,10 @@ export default function Registration() {
 
   async function handleConfirmationSubmit(event) {
     event.preventDefault();
+    window.location.href = "/";
+    alert(
+      "Zahtev za registraciju je poslat. Proverite Vasu email adresu za potvrdu."
+    );
 
     setIsLoading(true);
   }

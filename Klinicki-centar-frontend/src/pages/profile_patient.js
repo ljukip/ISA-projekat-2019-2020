@@ -167,6 +167,26 @@ export default function Patient() {
           </div>
         </div>
       </form>
+      {/*xa lekara dodatne opcije
+      <div className="Div-vertical-transparent">
+        <MDBBox className="box2">
+          <button
+            className="App-button"
+            onClick={(event) => (window.location.href = "/exam_in_progress")}
+          >
+            {" Zapocni pregled"}
+          </button>
+        </MDBBox>
+        <MDBBox className="box3">
+          <button
+            className="App-button"
+            onClick={(event) => (window.location.href = "/chart")}
+          >
+            {" Karton pacijenta"}
+          </button>
+        </MDBBox>
+      </div>
+      */}
     </div>
   );
 }
