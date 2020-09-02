@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Router, Route, RouteHandler } from "react-router";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import logo from "../logo.png";
 import "../App.css";
 import "../routes/routes.js";
@@ -11,7 +11,7 @@ import Toolbar from "react-minimalist-toolbar";
 import { ProgressBar, Button } from "react-bootstrap";
 import { MDBBox } from "mdbreact";
 
-function homepatient() {
+export default function Homepatient() {
   var menu = [
     {
       text: "Profil korisnika",
@@ -22,10 +22,14 @@ function homepatient() {
       ],
     },
   ];
-
-  const color1 = {
-    backgroundColor: "yellow",
-  };
+  const history = useHistory();
+  function onclick(event) {
+    try {
+      history.push("/list_clinics");
+    } catch (e) {
+      alert(e.message);
+    }
+  }
 
   return (
     <div className="App">
@@ -42,7 +46,7 @@ function homepatient() {
         <div bgColor="transparent" className="Div-horizontal">
           <MDBBox className="box1">
             Lista klinika
-            <button className="App-button1"> </button>
+            <button className="App-button1"></button>
           </MDBBox>
           <MDBBox className="box2">
             Zdravstveni karton
@@ -57,4 +61,3 @@ function homepatient() {
     </div>
   );
 }
-export default homepatient;

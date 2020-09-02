@@ -15,15 +15,40 @@ import "react-tabulator/lib/css/bootstrap/tabulator_bootstrap.min.css";
 import { button } from "aws-amplify";
 
 const columns = [
-  { title: "Ime", field: "name", width: 150, align: "left" },
-  { title: "Prezime", field: "surname", width: 150, align: "left" },
+  {
+    title: "Ime",
+    field: "name",
+    align: "left",
+    headerFilter: "input",
+  },
+  {
+    title: "Prezime",
+    field: "surname",
+    align: "left",
+    headerFilter: "input",
+  },
   {
     title: "avgOcena",
     field: "avgRate",
     align: "center",
     headerFilter: "input",
   },
-  { title: "Vreme", field: "time", align: "center" },
+  {
+    title: "Termini",
+    field: "time",
+    align: "center",
+    formatter: function (cell, formatterParams, onRendered) {
+      return "<ul ><li><time>10:20</time></li><li><time>10:20</time></li><li><time>10:20</time></li><li><time>10:20</time></li></ul>";
+    },
+  },
+  {
+    title: "",
+    width: 114,
+    align: "center",
+    formatter: function (cell, formatterParams, onRendered) {
+      return "<button onClick={handleClick}>izaberi</button>";
+    },
+  },
 ];
 const data = [
   {
@@ -45,9 +70,9 @@ class physicianList extends React.Component {
     history.push("/home_patient");
   }
 
-  rowClick = (e, row) => {
+  cellClick = (e, cell) => {
     console.log("ref table: ", this.ref.table); // this is the Tabulator table instance
-    console.log("rowClick id: ${row.getData().id}", row, e);
+    console.log("cellClick id: ${row.getData().id}", cell, e);
     //const history = useHistory();
     alert("stisnuto");
     //history.push("/home_patient");
@@ -79,12 +104,12 @@ class physicianList extends React.Component {
           <Toolbar logo={logo} brand="InfoKC" className="toolbar"></Toolbar>
           <p></p>
           <p></p>
-          <p className="App-p">Slobodni termini</p>
+          <p className="App-p">Lekari na raspolaganju</p>
           <div bgColor="transparent" className="Div-vertical">
             <React15Tabulator
               columns={columns}
               data={data}
-              rowClick={this.rowClick}
+              cellClick={this.cellClick}
               data-custom-attr="test-custom-attribute"
               className="custom-css-class"
             />

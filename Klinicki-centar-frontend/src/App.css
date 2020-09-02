@@ -131,6 +131,7 @@
   cursor: pointer;
 }
 .App-button {
+  background-color: rgba(149, 103, 255, 0.486);
   height: 6vh;
   width: 36vh;
   min-height: 1vh;
@@ -164,6 +165,9 @@
   min-height: 26vh;
   min-width: 41vh;
   background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .App-boxe-user {
   min-height: 36vh;
@@ -186,7 +190,19 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #21daff;
-  vertical-align: top;
+  vertical-align: center;
+}
+.Div-horizontal2 {
+  background-color: transparent;
+  background-size: 1540px 840px;
+  min-height: 6vh;
+  min-width: 166vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  vertical-align: center;
 }
 .Div-vertical {
   background-color: #ffe8f2;
@@ -205,7 +221,7 @@
 .Div-horizontal-transparent {
   background-color: transparent;
   background-size: 1540px 840px;
-  min-height: 66vh;
+  min-height: 6vh;
   min-width: 166vh;
   display: flex;
   flex-direction: row;

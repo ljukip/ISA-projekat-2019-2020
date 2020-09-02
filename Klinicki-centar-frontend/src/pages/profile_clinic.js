@@ -43,6 +43,10 @@ function ProfileClinic() {
           <p className="P">
             Opis klinike adaerfttresaertyfdtrsae ef wf er etg e r
           </p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
           <div className="Div-horizontal-transparent">
             <MDBBox className="box1">
               Lekari
@@ -61,6 +65,10 @@ function ProfileClinic() {
               <button className="App-button1"> </button>
             </MDBBox>
           </div>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
           <p className="P">Kontakt:</p>
           <p className="P">Adresa: adresa; Telefon:telefon;</p>
         </div>

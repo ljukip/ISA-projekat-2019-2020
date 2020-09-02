@@ -12,7 +12,7 @@ import { ProgressBar, Button } from "react-bootstrap";
 import ServerTable from "react-strap-table";
 import { React15Tabulator } from "react-tabulator";
 import "react-tabulator/lib/css/bootstrap/tabulator_bootstrap.min.css";
-import { Buton, FormGroup, FormControl, FormLabel } from "react-bootstrap";
+import { FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import { useState } from "react";
 
 const columns = [

@@ -1,0 +1,16 @@
+.tabulator-row.tabulator-row-even {
+  background-color: #cafbff88;
+}
+.tabulator-row {
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(199, 103, 255, 0.685);
+  background-color: #cafbff3d;
+  min-height: 48px;
+  vertical-align: middle;
+}
+.tabulator .tabulator-header {
+  font-weight: normal;
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(199, 103, 255, 0.685);
+  color: rgba(161, 103, 255, 0.801);
+}

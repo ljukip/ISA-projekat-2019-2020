@@ -11,6 +11,7 @@ import App from "../App";
 import { useAppContext } from "../libs/contextLib";
 import Routes from "../routes/routes";
 import Toolbar from "react-minimalist-toolbar";
+import { authenticationService } from "../services/authentication.service.js";
 
 export default function Login() {
   const { userHasAuthenticated } = false; //useAppContext();
@@ -21,10 +22,14 @@ export default function Login() {
   function validateForm() {
     return email.length > 0 && password.length > 0;
   }
+  
 
   function handleSubmit(event) {
     event.preventDefault();
     //userHasAuthenticated(true);
+    authenticationService.login(email, password);
+    //history.push("/" + authenticationService); roles
+
     try {
       alert("Logged in");
       history.push("/home_patient");
