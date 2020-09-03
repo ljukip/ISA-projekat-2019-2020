@@ -24,6 +24,7 @@ import Types from "../pages/exams_types.js";
 import ProfileAKC from "../pages/profile_kc_admin.js";
 import HomePhy from "../pages/home_physician.js";
 import { BrowserRouter as Router } from "react-router-dom";
+import Calender from "../pages/calender_physician.js";
 
 export default function Routes() {
   return (
@@ -49,6 +50,7 @@ export default function Routes() {
       <Route exact path="/profile_clinic_admin" component={ProfileAK} />
       <Route exact path="/profile_kc_admin" component={ProfileAKC} />
       <Route exact path="/home_physician" component={HomePhy} />
+      <Route exact path="/calender" component={Calender} />
     </Router>
   );
 }

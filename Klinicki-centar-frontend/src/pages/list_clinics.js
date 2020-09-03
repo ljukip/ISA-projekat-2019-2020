@@ -70,7 +70,7 @@ const data = [
   },
 ];
 
-class clinicList extends React.Component {
+class ClinicList extends React.Component {
   state = {
     data: [],
   };
@@ -160,4 +160,4 @@ class clinicList extends React.Component {
     );
   }
 }
-export default clinicList;
+export default ClinicList;
